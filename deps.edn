@@ -1,0 +1,8 @@
+{:paths ["src"] ; where your cljd files will live
+ :deps {org.clojure/clojure {:mvn/version "1.10.1"}
+        tensegritics/clojuredart
+        {:git/url "https://github.com/tensegritics/ClojureDart.git"
+         :sha "a6bff55cb69298d79869362e8026c65dafb4d417"}}
+ :aliases {:cljd {:main-opts ["-m" "cljd.build"]}}
+ :cljd/opts {:kind :dart
+             :main freezed-sealed-dynamic.main}}

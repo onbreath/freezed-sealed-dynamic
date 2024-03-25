@@ -1,0 +1,7 @@
+(ns freezed-sealed-dynamic.main
+  (:require ["dart:core" :as d]
+            ["package:freezed_sealed_dynamic/freezed_sealed.dart" :as freezed-sealed]))
+
+(defn main []
+  (let [v (freezed-sealed/Value.string "test-value")]
+    (d/print (.-value v))))
